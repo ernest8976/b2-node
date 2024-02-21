@@ -1,0 +1,35 @@
+=============== Feb 21, 2024 (UTC) ===============
+03:44:36.400557 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+03:44:36.409794 db@open opening
+03:44:36.413466 version@stat F·[] S·0B[] Sc·[]
+03:44:36.416206 db@janitor F·2 G·0
+03:44:36.416587 db@open done T·6.530792ms
+04:38:09.237429 memdb@flush N·39819 S·3MiB
+04:38:09.547747 memdb@flush created L0@3 N·39819 S·675KiB "blo..\x00\x01\x81,v1":"blo..\xe0L\x81,v39764"
+04:38:09.547992 version@stat F·[1] S·675KiB[675KiB] Sc·[0.25]
+04:38:09.548700 memdb@flush committed F·1 T·310.340625ms
+04:38:09.553047 journal@remove removed @1
+05:58:59.211541 memdb@flush N·39597 S·3MiB
+05:58:59.548764 memdb@flush created L0@5 N·39597 S·670KiB "blo..\x01\xc2T,v39820":"blo..\xe0\x98\xb0,v79361"
+05:58:59.549064 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+05:58:59.549539 memdb@flush committed F·1 T·337.557541ms
+05:58:59.552865 journal@remove removed @2
+06:52:15.000774 memdb@flush N·39597 S·3MiB
+06:52:15.488131 memdb@flush created L0@7 N·39597 S·671KiB "blo..\x01ģ,v79417":"blo..\xe0\xe4\xdf,v118958"
+06:52:15.488826 version@stat F·[3] S·1MiB[1MiB] Sc·[0.75]
+06:52:15.491091 memdb@flush committed F·1 T·489.677916ms
+06:52:15.498316 journal@remove removed @4
+07:45:34.557363 memdb@flush N·39597 S·3MiB
+07:45:35.007020 memdb@flush created L0@9 N·39597 S·672KiB "blo..\x01\xc6\xf2,v119014":"blo..\xe11\x0e,v158555"
+07:45:35.008296 version@stat F·[4] S·2MiB[2MiB] Sc·[1.00]
+07:45:35.011251 memdb@flush committed F·1 T·445.788959ms
+07:45:35.017839 journal@remove removed @6
+07:45:35.019185 table@compaction L0·4 -> L1·0 S·2MiB Q·158677
+07:45:36.353580 table@build created L1@10 N·122175 S·2MiB "blo..\x00\x01\x81,v1":"blo..\xe1\"F,v150873"
+07:45:36.674893 table@build created L1@11 N·36435 S·597KiB "blo..\xe1\"H,v150877":"blo..\xe11\x0e,v158555"
+07:45:36.675779 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.03]
+07:45:36.678347 table@compaction committed F-2 S-7KiB Ke·0 D·0 T·1.65780071s
+07:45:36.679547 table@remove removed @9
+07:45:36.680408 table@remove removed @7
+07:45:36.681664 table@remove removed @5
+07:45:36.682923 table@remove removed @3

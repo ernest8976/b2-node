@@ -1,0 +1,110 @@
+version: '3'
+
+services:
+  node0:
+    container_name: b2hub0
+    image: "ernest/node"
+    ports:
+      - "26656-26657:26656-26657"
+      - "8545-8546:8545-8546"
+    volumes:
+      - ./chainData/ernest/node0/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.2
+
+  node1:
+    container_name: b2hub1
+    image: "ernest/node"
+    ports:
+      - "26659-26660:26656-26657"
+      - "8045-8046:8545-8546"
+    volumes:
+      - ./chainData/ernest/node1/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.3
+
+  node2:
+    container_name: b2hub2
+    image: "ernest/node"
+    ports:
+      - "26661-26662:26656-26657"
+    volumes:
+      - ./chainData/ernest/node2/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.4
+
+  node3:
+    container_name: b2hub3
+    image: "ernest/node"
+    ports:
+      - "26663-26664:26656-26657"
+    volumes:
+      - ./chainData/ernest/node3/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.5
+
+  node4:
+    container_name: b2hub4
+    image: "ernest/node"
+    ports:
+      - "36656-36657:26656-26657"
+    volumes:
+      - ./chainData/ernest/node4/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.6
+
+  node5:
+    container_name: b2hub5
+    image: "ernest/node"
+    ports:
+      - "36659-36660:26656-26657"
+    volumes:
+      - ./chainData/ernest/node5/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.7
+
+  node6:
+    container_name: b2hub6
+    image: "ernest/node"
+    ports:
+      - "36661-36662:26656-26657"
+    volumes:
+      - ./chainData/ernest/node6/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.8
+
+  node7:
+    container_name: b2hub7
+    image: "ernest/node"
+    ports:
+      - "36663-36664:26656-26657"
+    volumes:
+      - ./chainData/ernest/node7/ethermintd:/evmos:Z
+    command: sh -c "ethermintd start --home /evmos"
+    networks:
+      localnet:
+        ipv4_address: 192.167.10.9
+
+
+networks:
+  localnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        -
+          subnet: 192.167.10.0/16

@@ -7,6 +7,8 @@ ENV PACKAGES git build-base
 WORKDIR /go/src/github.com/evmos/ethermint
 
 # Install dependencies
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+RUN go env -w GOPROXY=https://goproxy.cn,direct
 RUN apk add --update $PACKAGES
 RUN apk add linux-headers
 
