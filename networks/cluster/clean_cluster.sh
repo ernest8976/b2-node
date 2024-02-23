@@ -1,3 +1,3 @@
 #!/bin/bash
 docker-compose down
-rm -rf chainDataBak
+rm -rf chainData
