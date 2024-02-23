@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mv chainDataBak chainData
+cp -r chainDataBak chainData
 docker-compose up -d
